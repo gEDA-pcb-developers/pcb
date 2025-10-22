@@ -207,8 +207,8 @@ if test "X$docs_yesno" = "Xyes" -a "X$pcb_git_version" = "Xyes" ; then
       fi
    fi
    if test "X$MKINFO" != "Xno"; then
-      vmajor=`echo "$v" | sed 's/.* \([[0-9]]*\)\.\([[0-9]]*\)$/\1/'`
-      vminor=`echo "$v" | sed 's/.* \([[0-9]]*\)\.\([[0-9]]*\)$/\2/'`
+      vmajor=`echo "$v" | sed 's/.* \([[0-9]]*\)\.\([[0-9]]*\).*$/\1/'`
+      vminor=`echo "$v" | sed 's/.* \([[0-9]]*\)\.\([[0-9]]*\).*$/\2/'`
       AC_MSG_RESULT([$vmajor.$vminor])
       if test "$vmajor" -lt 4 \
               || (test "$vmajor" -eq 4 && test "$vminor" -lt 6); then
