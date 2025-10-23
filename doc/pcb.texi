@@ -5963,6 +5963,10 @@ for the definitions of rotation.  In other words, when pin #1 is at
 the centroid of the part and pin #2 is in the upper left quadrant, the
 rotation is declared to be zero degrees.
 
+If pin #1 happens to be close (<10°) to the axis of the element, the
+rotation also depends on number of pins (there's a different definition
+of rotation for two-pin elements).
+
 @c ----  Annotation File Format appendix ----
 @node Annotation File Format
 @appendix Annotation File Format
